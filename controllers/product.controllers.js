@@ -28,15 +28,14 @@ import path from 'path';
 
 
 export const getAnalyticalData = async (req, res) => {
-  
-  try {
-    const db = getDB(); // Assuming getDB() retrieves the MongoDB client instance
 
-    // Aggregation pipeline to calculate the required data
-    const analyticalData = await db.collection('EstroTech').aggregate([
+  try {
+    const db = getDB(); 
+
+    const analyticalData = await db.collection('analytics').aggregate([
       {
         $group: {
-          _id: { day: { $dayOfMonth: "$timestamp" }, hour: { $hour: "$timestamp" } },
+          _id: { day: { $dayOfMonth: { $toDate: "$timestamp" } }, hour: { $hour: { $toDate: "$timestamp" } } },
           count: { $sum: 1 }
         },
       },
@@ -64,7 +63,7 @@ export const getAnalyticalData = async (req, res) => {
         $unset: "_id"
       },
       {
-        $sort: { day: 1 }
+        $sort: { "_id.day": 1 }
       }
     ]).toArray();
 
@@ -73,35 +72,35 @@ export const getAnalyticalData = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Failed to fetch analytical data' });
   }
+
 };
 
 
-
-
 export const getUptimeData = async (req, res) => {
+
   try {
     const db = getDB();
 
-    // Fetch all documents sorted by timestamp
+
     const docs = await db.collection('EstroTech').find().sort({ timestamp: 1 }).toArray();
 
-    // Prepare array for formatted uptime data
+
     let uptimeData = [];
 
-    // Iterate through documents to format uptime data
+
     for (let i = 0; i < docs.length; i++) {
       const currentDoc = docs[i];
       const previousDoc = i > 0 ? docs[i - 1] : null;
 
-      // Skip consecutive states
+
       if (previousDoc && previousDoc.metadata.data === currentDoc.metadata.data) {
         continue;
       }
 
-      // Calculate duration in milliseconds for current state
+
       const stateDuration = currentDoc.metadata.timestamp - (previousDoc ? previousDoc.metadata.timestamp : currentDoc.metadata.timestamp);
 
-      // Format uptime data object
+
       const uptimeEntry = {
         timestamp: currentDoc.timestamp,
         state: currentDoc.metadata.data,

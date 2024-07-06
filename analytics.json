@@ -1,50 +1,26 @@
 [
   {
-    "timestamp": "2024-07-05T15:52:16.331Z",
+    "timestamp": "2024-07-06T10:15:24.182Z",
     "metadata": {
-      "deviceId": "sxaj6c8kfaa",
+      "deviceId": "q280spb9yxf",
       "data": 1,
-      "timestamp": 1720194736331
+      "timestamp": 1720260924182
     }
   },
   {
-    "timestamp": "2024-07-05T15:52:16.331Z",
+    "timestamp": "2024-07-06T10:15:24.182Z",
     "metadata": {
-      "deviceId": "iip6mvid5ad",
-      "data": "connected",
-      "timestamp": 1720194736331
-    }
-  },
-  {
-    "timestamp": "2024-07-05T15:52:16.331Z",
-    "metadata": {
-      "deviceId": "j41orh9medk",
-      "data": 1,
-      "timestamp": 1720194736331
-    }
-  },
-  {
-    "timestamp": "2024-07-05T15:52:16.331Z",
-    "metadata": {
-      "deviceId": "i4behpj10or",
-      "data": "disconnected",
-      "timestamp": 1720194736331
-    }
-  },
-  {
-    "timestamp": "2024-07-05T15:52:16.331Z",
-    "metadata": {
-      "deviceId": "1twij89m47z",
+      "deviceId": "ja0h8effk6i",
       "data": 0,
-      "timestamp": 1720194736331
+      "timestamp": 1720260924182
     }
   },
   {
-    "timestamp": "2024-07-05T15:52:16.331Z",
+    "timestamp": "2024-07-06T10:15:24.182Z",
     "metadata": {
-      "deviceId": "qvre4wg6ep",
-      "data": "disconnected",
-      "timestamp": 1720194736331
+      "deviceId": "ru5fwd13vii",
+      "data": 1,
+      "timestamp": 1720260924182
     }
   }
 ]

@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2024-07-06T10:06:01.711Z",
+    "metadata": {
+      "deviceId": "meis5ujjkk8",
+      "data": "disconnected",
+      "timestamp": 1720260361711
+    }
+  },
+  {
+    "timestamp": "2024-07-06T10:06:01.711Z",
+    "metadata": {
+      "deviceId": "wnunx2cqh7i",
+      "data": "disconnected",
+      "timestamp": 1720260361711
+    }
+  },
+  {
+    "timestamp": "2024-07-06T10:06:01.711Z",
+    "metadata": {
+      "deviceId": "fu7lanr6nju",
+      "data": "disconnected",
+      "timestamp": 1720260361711
+    }
+  }
+]
