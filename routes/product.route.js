@@ -1,13 +1,12 @@
 import express from "express";
-import { getProducts , addProduct } from "../controllers/product.controllers.js";
+import { getAnalyticalData , getUptimeData , getOverallReport } from "../controllers/product.controllers.js";
 const router = express.Router();
 
 
-router.get('/', getProducts);
+router.get('/analytical', getAnalyticalData);
 
-router.post('/',addProduct);
+router.get('/uptime', getUptimeData);
 
-
-
+router.get('/overallreport', getOverallReport);
 
 export default router;
