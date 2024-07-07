@@ -3,9 +3,12 @@ import { getAnalyticalData , getUptimeData , getOverallReport } from "../control
 const router = express.Router();
 
 
+
 router.get('/analytical', getAnalyticalData);
 
+
 router.get('/uptime', getUptimeData);
+
 
 router.get('/overallreport', getOverallReport);
 
