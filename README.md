@@ -1,4 +1,4 @@
-# Estro Tech Robotics: Device Monitoring API
+# Device Monitoring API
 
 ## Project Title
   Device Monitoring API
