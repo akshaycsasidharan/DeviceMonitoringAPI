@@ -14,13 +14,14 @@
 4. [How to Install and Run the Project](#how-to-install-and-run-the-project)
 5. [How to Use the Project](#how-to-use-the-project)
 6. [API Documentation](#api-documentation)
+7. [Swagger Documentation](#Swagger-documentation)
 
 
 ## How to Install and Run the Project
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/yourusername/estro-tech-robotics.git
-   cd estro-tech-robotics
+1. **Clone the repository:** 
+  git clone https://github.com/yourusername/DeviceMonitoringAPI.git
+  cd DeviceMonitoringAPI
+
    
 ## Install the dependencies:
   npm install
@@ -109,4 +110,7 @@
     "totalUptime": "5 days",
     "totalDowntime": "2 days"
   }
+
+## Swagger Documentation
+  For detailed API documentation, visit the https://editor.swagger.io/
 
