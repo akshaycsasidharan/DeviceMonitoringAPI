@@ -27,7 +27,7 @@
   npm install
 
 ## Set up environment variables:
-  Create a .env file in the root directory and add the following environment variables:
+  Create a .env file in the root directory and add the following environment variables:<br>
   MONGO_URI=your_mongodb_uri <br>
   DB=your_database_name <br>
   JWT_SECRET=your_jwt_secret
@@ -51,15 +51,15 @@
   GET /api/auth/generate-token
   
   ## Analytical Data API
-  GET /api/analytical
+  GET /api/analytical<br>
   Returns aggregated analytical data on a per-hour per-day basis.
   
   ## Uptime Data API
-  GET /api/uptime
+  GET /api/uptime<br>
   Returns an array of objects containing the state of the device (connected or disconnected), the timestamp of the state change, and the duration of each state.
   
   ## Overall Report API
-  GET /api/overallreport
+  GET /api/overallreport<br>
   Returns the total and average analytical data, busiest and quietest days, and total uptime and downtime in a readable form.
 
 ### API Documentation
