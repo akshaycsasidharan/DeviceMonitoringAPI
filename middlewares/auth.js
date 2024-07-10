@@ -1,17 +1,17 @@
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
 dotenv.config();
 
 export const verifyToken = (req, res, next) => {
   try {
-    let token = req.header('Authorization');
+    let token = req.header("Authorization");
 
     if (!token) {
-      return res.status(403).send('Access Denied');
+      return res.status(403).send("Access Denied");
     }
 
-    if (token.startsWith('Bearer ')) {
+    if (token.startsWith("Bearer ")) {
       token = token.slice(7, token.length).trimLeft();
     }
 

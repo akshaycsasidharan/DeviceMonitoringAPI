@@ -1,10 +1,7 @@
 import { getDB } from "../connection/connection.js";
-import fs from "fs";
-import path from "path";
 
 
 export const getAnalyticalData = async (req, res) => {
-
   try {
     const db = getDB();
 
@@ -61,9 +58,7 @@ export const getAnalyticalData = async (req, res) => {
   }
 };
 
-
 export const getUptimeData = async (req, res) => {
-
   try {
     const db = getDB();
 
@@ -106,52 +101,48 @@ export const getUptimeData = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Failed to fetch uptime data" });
   }
-  
 };
 
-
-
 export const getOverallReport = async (req, res) => {
-
   try {
     const db = getDB();
-
     const startDate = new Date();
     startDate.setMonth(startDate.getMonth() - 2);
 
-    // Total and average analytical data
     const analyticalData = await db
       .collection("analytics")
       .aggregate([
         {
           $match: {
-            timestamp: { $gte: startDate }
-          }
+            timestamp: { $gte: startDate },
+          },
         },
         {
           $group: {
             _id: { $dateToString: { format: "%Y-%m-%d", date: "$timestamp" } },
-            count: { $sum: 1 }
-          }
+            count: { $sum: 1 },
+          },
         },
         {
-          $sort: { _id: 1 }
-        }
+          $sort: { _id: 1 },
+        },
       ])
       .toArray();
 
-    if (analyticalData.length === 0) {
-      console.log("No analytical data found.");
-    } else {
-      console.log("Analytical Data:", analyticalData);
-    }
-
-    const totalAnalyticalData = analyticalData.reduce((sum, day) => sum + day.count, 0);
-    const averageAnalyticalData = analyticalData.length ? totalAnalyticalData / analyticalData.length : 0;
+    const totalAnalyticalData = analyticalData.reduce(
+      (sum, day) => sum + day.count,
+      0
+    );
+    const averageAnalyticalData = analyticalData.length
+      ? totalAnalyticalData / analyticalData.length
+      : 0;
 
     const sortedByCount = [...analyticalData].sort((a, b) => b.count - a.count);
-    const busiestDays = sortedByCount.slice(0, 3).map(day => day._id);
-    const quietestDays = sortedByCount.slice(-3).map(day => day._id).reverse();
+    const busiestDays = sortedByCount.slice(0, 3).map((day) => day._id);
+    const quietestDays = sortedByCount
+      .slice(-3)
+      .map((day) => day._id)
+      .reverse();
 
     // Total uptime and downtime
     const uptimeData = await db
@@ -159,20 +150,14 @@ export const getOverallReport = async (req, res) => {
       .aggregate([
         {
           $match: {
-            timestamp: { $gte: startDate }
-          }
+            timestamp: { $gte: startDate },
+          },
         },
         {
-          $sort: { timestamp: 1 }
-        }
+          $sort: { timestamp: 1 },
+        },
       ])
       .toArray();
-
-    if (uptimeData.length === 0) {
-      console.log("No uptime data found.");
-    } else {
-      console.log("Uptime Data:", uptimeData);
-    }
 
     let totalUptime = 0;
     let totalDowntime = 0;
@@ -211,7 +196,7 @@ export const getOverallReport = async (req, res) => {
       busiestDays,
       quietestDays,
       totalUptime: `${totalUptimeHours} hours`,
-      totalDowntime: `${totalDowntimeHours} hours`
+      totalDowntime: `${totalDowntimeHours} hours`,
     };
 
     res.json(overallReport);
@@ -219,5 +204,4 @@ export const getOverallReport = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Failed to fetch overall report data" });
   }
-  
 };

@@ -1,7 +1,5 @@
-import { MongoClient } from 'mongodb';
-import fs from 'fs';
-import dotenv from 'dotenv';
-
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -13,8 +11,8 @@ const generateData = () => {
   const startDate = new Date();
   startDate.setMonth(startDate.getMonth() - 2);
 
-  for (let i = 0; i < 3; i++) { 
-    const timestamp = new Date(startDate.getTime() + i * 60 * 1000); 
+  for (let i = 0; i < 3; i++) {
+    const timestamp = new Date(startDate.getTime() + i * 60 * 1000);
 
     const analyticalData = {
       timestamp: timestamp,
@@ -38,9 +36,9 @@ const insertData = async () => {
     const db = client.db(DB_NAME);
 
     const data = generateData();
-    await db.collection('analytics').insertMany(data);
+    await db.collection("analytics").insertMany(data);
 
-    console.log('Data inserted successfully');
+    console.log("Data inserted successfully");
   } finally {
     await client.close();
   }
