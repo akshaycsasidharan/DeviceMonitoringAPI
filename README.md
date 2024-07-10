@@ -29,7 +29,7 @@
 ## Set up environment variables:
   Create a .env file in the root directory and add the following environment variables:
   MONGO_URI=your_mongodb_uri <br>
-  DB=your_database_name
+  DB=your_database_name <br>
   JWT_SECRET=your_jwt_secret
 
 ## Run the project:
@@ -40,14 +40,14 @@
   To generate and insert sample analytical and uptime data into your MongoDB collections, use the provided scripts:
 
 ## Generate and insert analytical data:
-  node node analytical.mjs
+  node analytical.mjs
 
 ## Generate and insert uptime data:
   node uptime.mjs
 
 ## Authentication
 
-  Generate a token by accessing the following endpoint:
+  Generate a token by accessing the following endpoint:<br>
   GET /api/auth/generate-token
   
   ## Analytical Data API
@@ -64,9 +64,9 @@
 
 ### API Documentation
 ## Analytical Data API
-  Endpoint: /api/analytical
-  Method: GET
-  Response:
+  Endpoint: /api/analytical<br>
+  Method: GET<br>
+  Response:<br>
   [
     {
       "dataByHour": [
@@ -86,9 +86,9 @@
   ]
 
 ## Uptime Data API
-  Endpoint: /api/uptime
-  Method: GET
-  Response:
+  Endpoint: /api/uptime<br>
+  Method: GET<br>
+  Response:<br>
   [
     {
       "state": "connected",
@@ -99,9 +99,9 @@
   ]
 
 ## Overall Report API
-  Endpoint: /api/overallreport
-  Method: GET
-  Response:
+  Endpoint: /api/overallreport<br>
+  Method: GET<br>
+  Response:<br>
   {
     "totalAnalyticalData": 480,
     "averageAnalyticalData": 20,
