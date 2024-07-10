@@ -28,7 +28,7 @@
 
 ## Set up environment variables:
   Create a .env file in the root directory and add the following environment variables:
-  MONGO_URI=your_mongodb_uri
+  MONGO_URI=your_mongodb_uri <br>
   DB=your_database_name
   JWT_SECRET=your_jwt_secret
 
@@ -40,10 +40,10 @@
   To generate and insert sample analytical and uptime data into your MongoDB collections, use the provided scripts:
 
 ## Generate and insert analytical data:
-  node generateAnalyticalData.js
+  node node analytical.mjs
 
 ## Generate and insert uptime data:
-  node generateUptimeData.js
+  node uptime.mjs
 
 ## Authentication
 
