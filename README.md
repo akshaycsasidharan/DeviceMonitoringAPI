@@ -18,7 +18,7 @@
 
 
 ## How to Install and Run the Project
-1. **Clone the repository:** 
+ **Clone the repository:** 
   git clone https://github.com/yourusername/DeviceMonitoringAPI.git
   cd DeviceMonitoringAPI
 
@@ -64,52 +64,52 @@
 
 ### API Documentation
 ## Analytical Data API
-  Endpoint: /api/analytical<br>
-  Method: GET<br>
-  Response:<br>
-  [
-    {
-      "dataByHour": [
-        {
-          "hour": 0,
-          "count": 10
-        },
-        ...
-      ],
-      "net": 240,
-      "avg": 10,
-      "busiestHour": {
-        "hour": 14,
-        "count": 25
-      }
-    }
-  ]
+  **Endpoint:** /api/analytical<br>
+  **Method:** GET<br>
+  **Response:**<br>
+  &nbsp;&nbsp;[<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+      "dataByHour": [<br>
+        {<br>
+          "hour": 0,<br>
+          "count": 10<br>
+        },<br>
+        ...<br>
+      ],<br>
+      "net": 240,<br>
+      "avg": 10,<br>
+      "busiestHour": {<br>
+        "hour": 14,<br>
+        "count": 25<br>
+      }<br>
+    }<br>
+ &nbsp;&nbsp;]<br>
 
 ## Uptime Data API
-  Endpoint: /api/uptime<br>
-  Method: GET<br>
-  Response:<br>
-  [
-    {
-      "state": "connected",
-      "timestamp": "2024-05-01T00:00:00Z",
-      "duration": 120
-    },
-    ...
-  ]
+  **Endpoint:** /api/uptime<br>
+  **Method:** GET<br>
+  **Response:**<br>
+  &nbsp;&nbsp;[<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"state": "connected",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"timestamp": "2024-05-01T00:00:00Z",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"duration": 120<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+  &nbsp;&nbsp;]<br>
 
 ## Overall Report API
-  Endpoint: /api/overallreport<br>
-  Method: GET<br>
-  Response:<br>
-  {
-    "totalAnalyticalData": 480,
-    "averageAnalyticalData": 20,
-    "busiestDay": "2024-05-10",
-    "quietestDay": "2024-05-20",
-    "totalUptime": "5 days",
-    "totalDowntime": "2 days"
-  }
+  **Endpoint:** /api/overallreport<br>
+  **Method:** GET<br>
+  **Response:**<br>
+  &nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"totalAnalyticalData": 480,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"averageAnalyticalData": 20,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"busiestDay": "2024-05-10",<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"quietestDay": "2024-05-20",<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"totalUptime": "5 days",<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"totalDowntime": "2 days"<br>
+  &nbsp;&nbsp;}<br>
 
 ## Swagger Documentation
   For detailed API documentation, visit the https://editor.swagger.io/
