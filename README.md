@@ -19,7 +19,7 @@
 
 ## How to Install and Run the Project
  **Clone the repository:** 
-  git clone https://github.com/yourusername/DeviceMonitoringAPI.git
+  git clone https://github.com/akshaycsasidharan/DeviceMonitoringAPI<br>
   cd DeviceMonitoringAPI
 
    
