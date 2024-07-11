@@ -79,9 +79,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"net": 240,<br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"avg": 10,<br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"busiestHour": {<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hour": 14,<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 25<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hour": 14,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 25<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
  &nbsp;&nbsp;]<br>
 
