@@ -39,10 +39,10 @@
   Generate Sample Data
   To generate and insert sample analytical and uptime data into your MongoDB collections, use the provided scripts:
 
-## Generate and insert analytical data:
+### Generate and insert analytical data:
   node analytical.mjs
 
-## Generate and insert uptime data:
+### Generate and insert uptime data:
   node uptime.mjs
 
 ## Authentication
@@ -50,20 +50,20 @@
   Generate a token by accessing the following endpoint:<br>
   GET /api/auth/generate-token
   
-  ## Analytical Data API
+  ### Analytical Data API
   GET /api/analytical<br>
   Returns aggregated analytical data on a per-hour per-day basis.
   
-  ## Uptime Data API
+  ### Uptime Data API
   GET /api/uptime<br>
   Returns an array of objects containing the state of the device (connected or disconnected), the timestamp of the state change, and the duration of each state.
   
-  ## Overall Report API
+  ### Overall Report API
   GET /api/overallreport<br>
   Returns the total and average analytical data, busiest and quietest days, and total uptime and downtime in a readable form.
 
-### API Documentation
-## Analytical Data API
+## API Documentation
+### Analytical Data API
   **Endpoint:** /api/analytical<br>
   **Method:** GET<br>
   **Response:**<br>
@@ -85,7 +85,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
  &nbsp;&nbsp;]<br>
 
-## Uptime Data API
+### Uptime Data API
   **Endpoint:** /api/uptime<br>
   **Method:** GET<br>
   **Response:**<br>
@@ -98,7 +98,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
   &nbsp;&nbsp;]<br>
 
-## Overall Report API
+### Overall Report API
   **Endpoint:** /api/overallreport<br>
   **Method:** GET<br>
   **Response:**<br>
