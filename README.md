@@ -69,20 +69,20 @@
   **Response:**<br>
   &nbsp;&nbsp;[<br>
     &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-      "dataByHour": [<br>
-        {<br>
-          "hour": 0,<br>
-          "count": 10<br>
-        },<br>
-        ...<br>
-      ],<br>
-      "net": 240,<br>
-      "avg": 10,<br>
-      "busiestHour": {<br>
-        "hour": 14,<br>
-        "count": 25<br>
-      }<br>
-    }<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dataByHour": [<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hour": 0,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 10<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"net": 240,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"avg": 10,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"busiestHour": {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hour": 14,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 25<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
  &nbsp;&nbsp;]<br>
 
 ## Uptime Data API
@@ -94,7 +94,7 @@
       &nbsp;&nbsp;&nbsp;&nbsp;"state": "connected",<br>
       &nbsp;&nbsp;&nbsp;&nbsp;"timestamp": "2024-05-01T00:00:00Z",<br>
       &nbsp;&nbsp;&nbsp;&nbsp;"duration": 120<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;},<br>
     &nbsp;&nbsp;&nbsp;&nbsp;...<br>
   &nbsp;&nbsp;]<br>
 
