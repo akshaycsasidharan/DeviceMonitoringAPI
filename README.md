@@ -50,66 +50,66 @@
   Generate a token by accessing the following endpoint:<br>
   GET /api/auth/generate-token
   
-  ### Analytical Data API
-  GET /api/analytical<br>
-  Returns aggregated analytical data on a per-hour per-day basis.
+ *  ### Analytical Data API
+    GET /api/analytical<br>
+    Returns aggregated analytical data on a per-hour per-day basis.
   
-  ### Uptime Data API
-  GET /api/uptime<br>
-  Returns an array of objects containing the state of the device (connected or disconnected), the timestamp of the state change, and the duration of each state.
+  * ### Uptime Data API
+    GET /api/uptime<br>
+    Returns an array of objects containing the state of the device (connected or disconnected), the timestamp of the state change, and the duration of each state.
   
-  ### Overall Report API
-  GET /api/overallreport<br>
-  Returns the total and average analytical data, busiest and quietest days, and total uptime and downtime in a readable form.
+  * ### Overall Report API
+    GET /api/overallreport<br>
+    Returns the total and average analytical data, busiest and quietest days, and total uptime and downtime in a readable form.
 
 ## API Documentation
-### Analytical Data API
-  **Endpoint:** /api/analytical<br>
-  **Method:** GET<br>
-  **Response:**<br>
-  &nbsp;&nbsp;[<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dataByHour": [<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hour": 0,<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 10<br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"net": 240,<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"avg": 10,<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"busiestHour": {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hour": 14,<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 25<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
- &nbsp;&nbsp;]<br>
+* ### Analytical Data API
+    **Endpoint:** /api/analytical<br>
+    **Method:** GET<br>
+    **Response:**<br>
+    &nbsp;&nbsp;[<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dataByHour": [<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hour": 0,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 10<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"net": 240,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"avg": 10,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"busiestHour": {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hour": 14,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 25<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+   &nbsp;&nbsp;]<br>
 
-### Uptime Data API
-  **Endpoint:** /api/uptime<br>
-  **Method:** GET<br>
-  **Response:**<br>
-  &nbsp;&nbsp;[<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"state": "connected",<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"timestamp": "2024-05-01T00:00:00Z",<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"duration": 120<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;},<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-  &nbsp;&nbsp;]<br>
+* ### Uptime Data API
+    **Endpoint:** /api/uptime<br>
+    **Method:** GET<br>
+    **Response:**<br>
+    &nbsp;&nbsp;[<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"state": "connected",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"timestamp": "2024-05-01T00:00:00Z",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"duration": 120<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+    &nbsp;&nbsp;]<br>
 
-### Overall Report API
-  **Endpoint:** /api/overallreport<br>
-  **Method:** GET<br>
-  **Response:**<br>
-  &nbsp;&nbsp;{<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;"totalAnalyticalData": 480,<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;"averageAnalyticalData": 20,<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;"busiestDay": "2024-05-10",<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;"quietestDay": "2024-05-20",<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;"totalUptime": "5 days",<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;"totalDowntime": "2 days"<br>
-  &nbsp;&nbsp;}<br>
+* ### Overall Report API
+    **Endpoint:** /api/overallreport<br>
+    **Method:** GET<br>
+    **Response:**<br>
+    &nbsp;&nbsp;{<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"totalAnalyticalData": 480,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"averageAnalyticalData": 20,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"busiestDay": "2024-05-10",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"quietestDay": "2024-05-20",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"totalUptime": "5 days",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"totalDowntime": "2 days"<br>
+    &nbsp;&nbsp;}<br>
 
 ## Swagger Documentation
   For detailed API documentation, visit the https://editor.swagger.io/
